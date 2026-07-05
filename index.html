@@ -257,7 +257,7 @@
 
 <!-- 5. ルナリエ導入 -->
 <div class="screen stage-screen" id="introScreen">
-  <div class="bgimg kb-zoom" style="background-image:url(img/lunalie-moon.jpg);"></div>
+  <div class="bgimg kb-zoom" style="background-image:url(lunalie-moon.jpg);"></div>
   <canvas class="twinkle"></canvas>
   <div class="shade"></div>
   <p class="brandline">こころ星座</p>
@@ -267,7 +267,7 @@
 
 <!-- 6. 星座の語り -->
 <div class="screen stage-screen" id="zodiacScreen">
-  <div class="bgimg kb-zoom" style="background-image:url(img/lunalie-sky.jpg);"></div>
+  <div class="bgimg kb-zoom" style="background-image:url(lunalie-sky.jpg);"></div>
   <canvas class="twinkle"></canvas>
   <div class="shade"></div>
   <p class="brandline" id="zodiacBrand">こころ星座</p>
@@ -307,8 +307,8 @@ yuwa Bloom Realm</p>
   <button class="btn" id="againBtn">もういちど 夜をひらく</button>
 </div>
 
-<audio id="bgmTheme" src="bgm/theme.mp3" loop preload="auto"></audio>
-<audio id="bgmStory" src="bgm/story.mp3" loop preload="auto"></audio>
+<audio id="bgmTheme" src="theme.mp3" loop preload="auto"></audio>
+<audio id="bgmStory" src="story.mp3" loop preload="auto"></audio>
 
 <script>
 /* ================= データ ================= */
@@ -521,7 +521,7 @@ function showStoryPage(first){
     curImg=pg.img;
     const frontBg=bgToggle?bgA:bgB;
     const backBg=bgToggle?bgB:bgA;
-    frontBg.style.backgroundImage=`url(img/${pg.img})`;
+    frontBg.style.backgroundImage=`url(${pg.img})`;
     frontBg.classList.remove('kb-zoom','kb-a','kb-b','kb-up');
     void frontBg.offsetWidth;
     frontBg.classList.add(first?'kb-up':(bgToggle?'kb-a':'kb-b'));
